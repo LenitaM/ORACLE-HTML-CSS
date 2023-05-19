@@ -1,0 +1,85 @@
+<!-- HTML5 e CSS3 parte 1 crie uma página da Web
+
+marcaçoes de textos caracterizados por <tag>
+
+6 niveis de títulos: 
+Mais principal para o menos
+h1,h2,h3,h4,h4,h6    
+
+Paragráfos: <p></p>
+Negrito: <strong> </strong>
+Itálico: <em> </em>
+
+
+CSS
+
+medido em pixels mas para responsividade melhor por porcentagem
+style: propriedade de design CSS.
+
+(propriedade) text-align: center (valor);
+
+Existem três formas de configurarmos o CSS. 
+
+A que fizemos até agora foi a primeira delas, a chamada CSS inline. Ou seja, na linha onde temos nossa tag, adicionamos a propriedade do CSS. 
+
+A segunda é incluindo a estilização em cada tag na propriedade style, no mesmo arquivo html. <style> </style> no head.
+
+A terceira forma é através de um arquivo externo. Para que a estilização seja aplicada de forma correta, fique atento:
+
+-->
+
+<!DOCTYPE html> <!-- 1º: ! = serve para id como doctype 2º qual a função do html (html5 n precisa id a nova atualização)  serve para informar ao navegador qual versão do HTML estamos usando -->
+
+<html lang="pt-br"> <!-- tudo que vai ser redenrizado sem a primeira e a última tag,lang = linguagem usada -->
+
+<head> <!-- informações passada para o navegador, estrutural-->
+
+    <meta charset="UTF-8"> <!-- tag passa info e charset conjunto de caracteres escolhidos, um dicionário utilizado -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Alura</title> <!-- titulo da página web -->
+
+    <link rel="stylesheet" href="style.css">
+</head> 
+
+<body> <!-- Informação a ser exibida pelos usuários-->
+
+    <header> <!--Cabeçalho da Page-->
+       <h1 class="titulo-principal"> Barbearia Alura</h1>
+    </header>
+
+    <img id="banner" src="imgs\banner.jpg">
+
+    <div class="principal"> <!-- Serve para marcar o contéudo, -->
+        <!--Niveis hierarquicos o body é pai de tudo dentro dela-->
+        <h2 class="titulo-centralizado"> Sobre a Barbearia Alura </h2>
+
+        <p >Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+
+        <p  id="missão">Nossa missão é: <em> <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong></em>.</p>
+
+        <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+    </div>
+
+   <div class="beneficios">
+
+    <h3 class="titulo-centralizado"> Benefícios </h3>
+
+<!--
+    LSITAS
+    
+Listas Não Ordenadas: <ul> </ul>
+Listas Ordenadas: <ol> </ol>
+Lista interna do ul e ol: <li></li> marca cada item da lista
+
+-->
+    <ul> <!-- ctrl + shift + alt + seta para baixo escreve em varias linhas ao mesmo tempo-->
+        <li class="itens">Atendimento ao Cliente</li>
+        <li class="itens">Espaço diferenciado</li>
+        <li class="itens">Localização</li>
+        <li class="itens">Profissionais Qualificados</li>
+    </ul>
+<img class="img-beneficios" src="imgs\beneficios.jpg" alt="beneficios">
+</div>
+</body>
+</html>
