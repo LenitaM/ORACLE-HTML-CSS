@@ -1,0 +1,101 @@
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+    position: relative; /*para que a caixa tenha um posição se alinhe com o menu*/
+    width: 940px;
+    margin: 0 auto; /*auto = Delegamos para o navegador fazer a conta de calcular a largura que resta, dividir por dois, e adicionar metade em cada um dos lados.*/
+}
+
+nav {
+    position: absolute; /* position muda a posição da linha inicia e absolute passa o elemente para a frente, podendo ficar em qualquer lugar*/
+    top: 110px;
+    right: 0%;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px; /*Mudar o espaçamento dos itens top bottom right left */
+}
+
+nav a {
+    text-transform: uppercase; /*transforma o text*/
+    color: #000000;
+    font-weight: bold; /*espessura da fonte*/
+    font-size: 22px;
+    text-decoration: none; /*decoração do texto*/
+}
+
+nav a:hover { /*hover usado para o comportamento do mouse*/
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0; /*O elemento aumenta o seu tamanho. Quando declaro que existe um espaçamento interno, estou aumentando o conteúdo.*/
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px ;
+    box-sizing: border-box; /*espaçamento lateral esteja dentro do percentual 20px fica dentro do 30px*/
+
+    /*
+    Composição de uma border (a borda fica posicionada entre o padding e a margin)
+    border-color: #000000 ;
+    border-width: 2px;
+    border-style: solid; vários estilos
+
+    Forma mais simples, nessa ordem:
+    */
+    border: 2px solid #000000;
+    border-radius: 10px; /*arredonda bordas*/
+}
+
+.produtos li:hover { /*hover: "enquanto o mouse PASSAR no elemento*/
+    border-color: #c78c19;
+}
+
+.produtos li:active { /*hover: "quando o mouse for CLICADO(ativado) mo elemento*/
+    border-color: #088c19;
+}
+
+.produtos li:hover h2 { /* alterar o h2 quando o mouse passar por cima */
+    font-size: 34px;
+}
+
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px ;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin:20px 0;
+}
