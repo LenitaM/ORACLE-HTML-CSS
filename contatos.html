@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos - Barbearia Alura</title>
+    <link rel="stylesheet" href="reset.css" />
+    <!--sempre primeiro para n limpar nosso contéudo-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contatos.css">
+</head>
+
+<!--Formularios:
+Um formulário pode servir para, entre outras coisas, enviar os dados para uma outra página, capturar informações que o usuário digitar e enviar dados para um servidor.
+-->
+<body>
+    <header>
+        <div class="caixa">
+          <h1>
+            <!--quando tem uma logo e a o principal a ser exibido-->
+            <img src="imgs\logo.png" alt="Logo da Barbearia Alura" />
+          </h1>
+  
+          <nav>
+            <!-- tag de navegação-->
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <!-- tag ancoragem <a> </a> = Com o atributo href, teremos o endereço de destino de um link, podendo direcionar para e-mails, telefones, outros sites e abas -->
+              <li><a href="produtos.html">Produtos</a></li>
+              <li><a href="contatos.html">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <!--Estrutura de um formulário-->
+        <form> <!--tag para formulário-->
+
+            <label for="nomeSobrenome">Nome e Sobrenome</label> 
+            <input type="email" id="nomeSobrenome" class="input-padrao" required placeholder="Lenita Maciel"> <!--pegas os dados-->
+            
+              <!-- etiquetas para os inputs-->
+
+            <label for="email">Email</label>
+            <input type="text" id="email" class="input-padrao" required placeholder="email@email.com"> <!--required: obrigatório -->
+            
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) X XXXX-XXXX">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" cols="70" rows="10" class="input-padrao" required></textarea> <!-- Textarea Tag contéudo de caixa de mensagens podendo por conteúdo complexo-->
+
+          <fieldset> <!--A tag <fieldset> é usada para criar uma divisão no nosso formulário, com um ou mais <input>-->
+            <legend>Como prefere o nosso contato?</legend> <!--a tag <legend> que usamos para um título de um grupo de campos em qualquer formulário.-->
+
+            <label for="radio-email"> 
+              <input type="radio" name="contato" value="email" id="radio-email" checked> <!--type RADIO de seleção-->Email
+            </label>
+            <!--A propriedade id serve somente como um identificador para o item. Serve também para que eu possa fazer a conexão entre o label e aquele input específico-->
+            
+
+            <label for="radio-telefone">
+              <input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone
+            </label>
+             <!-- 
+              A propriedade NAME só pode ser "preenchida" uma única vez, por isso que, quando eu seleciono um dos itens, ele desmarca o outro, mantendo somente um selecionado.-->
+            
+            <label for="radio-whatsapp">
+              <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp">Whatsapp
+            </label>
+            <!--VALUE serve para criarmos o valor que meu input vai ter. É diretamente relacionada ao conteúdo daquele input, e não ao grupo dele.-->  
+          </fieldset>
+
+          <fieldset> <!--assuntos especificos, ex: cartão de crédito-->
+            <legend>Qual horário prefere ser atendido</legend>
+          <select name="" id="">
+            <option value="">Manhã</option>
+            <option value="">Tarde</option>
+            <option value="">Noite</option>
+          </select>
+          </fieldset>
+
+          <label for="checkbox"> 
+            <input type="checkbox" id="checkbox" class="checkbox"> Gostaria de receber nossas novidades por email?
+          </label> <!-- checked deixa a opção anterior marcado-->
+
+          <input type="submit" value="Enviar formulário" class="enviar">
+        </form>
+
+        <table> <!-- tag de tabela com linhas <tr> e colunas <td> -->
+            <thead> <!-- tag de cabeçalho da tabela-->
+              <tr>
+                <td>Dia</td>
+                <td>Horário</td>
+              </tr>
+            </thead>
+            <tbody> <!-- corpo da tabela-->
+              <tr>
+                <td>Segunda-feira</td>
+                <td>8h às 20h</td>
+              </tr>
+              <tr>
+                <td>Quarta-feira</td>
+                <td>8h às 20h</td>
+              </tr>
+              <tr>
+                <td>Sexta-feira</td>
+                <td>8h às 20h</td>
+              </tr>
+            </tbody>
+          <!--A tag tfoot, que representa o rodapé da tabela-->
+        </table>
+      </main>
+
+      <footer><!--tag do rodapé da page-->
+        <img src="imgs\logo-branco.png" alt="Logo da Barbearia Alura">
+        <p class="copyright"> &copy; Copyright Barbearia Alura - 2023</p>
+    </footer> 
+</body>
+</html>

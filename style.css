@@ -1,124 +1,101 @@
-/*      CORES NO CSS
-1º Utiliza nomes 
-
-blue, yellow, red
-
-2º hexadecimal usado para marcar cores
-
-            0123456789ABCDEF 
-
-    RGB = RED GREEN BLACK: humanos exergam três expectos de cores
-    # RED RED GREEN GREEN BLACK BLACK
-
-    0 = Ausência de cor 
-    F = Máximo de cor
-
-    Preto (ausência de cor) 
-    #00(RED)00(GREEN)00(BLACK)
-
-    Branco
-    FF(RED)FF(GREEN)FF(BLACK)
-
-    Cinza
-    #CCCCCC pq é mais próximo do branco
-
-    Vermelho
-    #FF(vermelhor esteja no máximo)0000 (Verde e Preto estejam ausentes)
-
-    3º Dicionário RGB
-
-        0 a 255 = variações de cores
-
-    0 = Ausência de cor
-    255 = Máximo de cor
-
-    Estrutura:
-
-    grb(red,green,black)
-
-    Branco
-    rgb(255,255,255)
-
-    Azul
-    rgb(0,0,255)
-
-
-    
-    
-*/
-
-/*MONTAR DA ORDEM HIERARQUICA*/
-
-body {
-    
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
 }
 
-/*
-Parametros de uma Imagem no CSS: 
-
-Largura (Width por ser usada em % ou pixels), Altura (Height = quando usa o Elements na page fica em azul) e Espaçamento Interno e Espaçamento Externo
-
-border: consegue ver a altura e a largura do elemento, finalização do elemento.
-
-padding (espaçamento interno): cima(top), baixo(bottom), esquerdo(left), direito(right), cria um quadro dentro do elemento, fazer ele se comportar no espaçamento interno que já tem.
-
-margin(espaçamento externo): espaço fora do elemento, entre o elemento e a margem da page, uma modura fora do elemento.
-
-*/
-
-#banner {
-
-    width: 100%; 
-
+.caixa {
+    position: relative; /*para que a caixa tenha um posição se alinhe com o menu*/
+    width: 940px;
+    margin: 0 auto; /*auto = Delegamos para o navegador fazer a conta de calcular a largura que resta, dividir por dois, e adicionar metade em cada um dos lados.*/
 }
 
-.principal {
-    background: #cccccc;
-    padding: 30px;
+nav {
+    position: absolute; /* position muda a posição da linha inicia e absolute passa o elemente para a frente, podendo ficar em qualquer lugar*/
+    top: 110px;
+    right: 0%;
 }
 
-.titulo-principal {
-    padding-left: 20px;
+nav li {
+    display: inline;
+    margin: 0 0 0 15px; /*Mudar o espaçamento dos itens top bottom right left */
 }
 
-.titulo-centralizado {
+nav a {
+    text-transform: uppercase; /*transforma o text*/
+    color: #000000;
+    font-weight: bold; /*espessura da fonte*/
+    font-size: 22px;
+    text-decoration: none; /*decoração do texto*/
+}
+
+nav a:hover { /*hover usado para o comportamento do mouse*/
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0; /*O elemento aumenta o seu tamanho. Quando declaro que existe um espaçamento interno, estou aumentando o conteúdo.*/
+}
+
+.produtos li {
+    display: inline-block;
     text-align: center;
-}
-
-p {
-    text-align: center;
-     /*background: #cccccc; não vai funcionar, vai corresponder a hierarquia p é filho de body */
-}
-
-#missão { /* forma de marcar o id, marca itens indidualmente */
-
-    font-size: 20px
-}
-
-em strong { /* vai levar apenas os strong dentro do em*/
-    color: #FF0000;
-}
-
-.itens { /* Classes marcar itens em cada um deles e podem ser repetidos e adc indivudalmente */
-
-    font-style: italic;
-}
-
-.beneficios {
-    background: #ffffff;
-    padding: 20px;
-}
-
-ul {
-    display: inline-block; /*ocupa só o tamanho do conteúdo, mas permite mexer nas larguras e espaçamentos*/
+    width: 30%;
     vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+    margin: 0 1.5%;
+    padding: 30px 20px ;
+    box-sizing: border-box; /*espaçamento lateral esteja dentro do percentual 20px fica dentro do 30px*/
+
+    /*
+    Composição de uma border (a borda fica posicionada entre o padding e a margin)
+    border-color: #000000 ;
+    border-width: 2px;
+    border-style: solid; vários estilos
+
+    Forma mais simples, nessa ordem:
+    */
+    border: 2px solid #000000;
+    border-radius: 10px; /*arredonda bordas*/
 }
 
-/* block = 100% prox item na linha de baixo, inline = das imagens, n deixa alterar o espaçmento interno e externo e tem block e inline = define uma largura, fixam, mas o dev quem da a ela e deixa mexer no espaçmento interno, externo, altura e largura  */
-.img-beneficios { 
-    width: 50%;
+.produtos li:hover { /*hover: "enquanto o mouse PASSAR no elemento*/
+    border-color: #c78c19;
+}
+
+.produtos li:active { /*hover: "quando o mouse for CLICADO(ativado) mo elemento*/
+    border-color: #088c19;
+}
+
+.produtos li:hover h2 { /* alterar o h2 quando o mouse passar por cima */
+    font-size: 34px;
 }
 
 
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px ;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin:20px 0;
+}
