@@ -1,54 +1,59 @@
+body {
+  font-family: 'Merriweather', serif;
+}
+
 header {
-    background: #BBBBBB;
-    padding: 20px 0;
+  background: #bbbbbb;
+  padding: 20px 0;
 }
 
 .caixa {
-    position: relative; /*para que a caixa tenha um posição se alinhe com o menu*/
-    width: 940px;
-    margin: 0 auto; /*auto = Delegamos para o navegador fazer a conta de calcular a largura que resta, dividir por dois, e adicionar metade em cada um dos lados.*/
+  position: relative; /*para que a caixa tenha um posição se alinhe com o menu*/
+  width: 940px;
+  margin: 0 auto; /*auto = Delegamos para o navegador fazer a conta de calcular a largura que resta, dividir por dois, e adicionar metade em cada um dos lados.*/
 }
 
 nav {
-    position: absolute; /* position muda a posição da linha inicia e absolute passa o elemente para a frente, podendo ficar em qualquer lugar*/
-    top: 110px;
-    right: 0%;
+  position: absolute; /* position muda a posição da linha inicia e absolute passa o elemente para a frente, podendo ficar em qualquer lugar*/
+  top: 110px;
+  right: 0%;
 }
 
 nav li {
-    display: inline;
-    margin: 0 0 0 15px; /*Mudar o espaçamento dos itens top bottom right left */
+  display: inline;
+  margin: 0 0 0 15px; /*Mudar o espaçamento dos itens top bottom right left */
 }
 
 nav a {
-    text-transform: uppercase; /*transforma o text*/
-    color: #000000;
-    font-weight: bold; /*espessura da fonte*/
-    font-size: 22px;
-    text-decoration: none; /*decoração do texto*/
+  text-transform: uppercase; /*transforma o text*/
+  color: #000000;
+  font-weight: bold; /*espessura da fonte*/
+  font-size: 22px;
+  text-decoration: none; /*decoração do texto*/
 }
 
-nav a:hover { /*hover usado para o comportamento do mouse*/
-    color: #c78c19;
-    text-decoration: underline;
+nav a:hover {
+  /*hover usado para o comportamento do mouse*/
+  color: #c78c19;
+  text-decoration: underline;
 }
 
 .produtos {
-    width: 940px;
-    margin: 0 auto;
-    padding: 50px 0; /*O elemento aumenta o seu tamanho. Quando declaro que existe um espaçamento interno, estou aumentando o conteúdo.*/
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 0; /*O elemento aumenta o seu tamanho. Quando declaro que existe um espaçamento interno, estou aumentando o conteúdo.*/
 }
 
 .produtos li {
-    display: inline-block;
-    text-align: center;
-    width: 30%;
-    vertical-align: top;
-    margin: 0 1.5%;
-    padding: 30px 20px ;
-    box-sizing: border-box; /*espaçamento lateral esteja dentro do percentual 20px fica dentro do 30px*/
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box; /*espaçamento lateral esteja dentro do percentual 20px fica dentro do 30px*/
 
-    /*
+  /*
     Composição de uma border (a borda fica posicionada entre o padding e a margin)
     border-color: #000000 ;
     border-width: 2px;
@@ -56,46 +61,220 @@ nav a:hover { /*hover usado para o comportamento do mouse*/
 
     Forma mais simples, nessa ordem:
     */
-    border: 2px solid #000000;
-    border-radius: 10px; /*arredonda bordas*/
+  border: 2px solid #000000;
+  border-radius: 10px; /*arredonda bordas*/
 }
 
-.produtos li:hover { /*hover: "enquanto o mouse PASSAR no elemento*/
-    border-color: #c78c19;
+.produtos li:hover {
+  /*hover: "enquanto o mouse PASSAR no elemento*/
+  border-color: #c78c19;
 }
 
-.produtos li:active { /*hover: "quando o mouse for CLICADO(ativado) mo elemento*/
-    border-color: #088c19;
+.produtos li:active {
+  /*hover: "quando o mouse for CLICADO(ativado) mo elemento*/
+  border-color: #088c19;
 }
 
-.produtos li:hover h2 { /* alterar o h2 quando o mouse passar por cima */
-    font-size: 34px;
+.produtos li:hover h2 {
+  /* alterar o h2 quando o mouse passar por cima */
+  font-size: 34px;
 }
-
 
 .produtos h2 {
-    font-size: 30px;
-    font-weight: bold;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .produto-descricao {
-    font-size: 18px ;
+  font-size: 18px;
 }
 
 .produto-preco {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 10px 0 0;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0 0;
 }
 
 footer {
-    text-align: center;
-    background: url("bg.jpg");
-    padding: 40px 0;
+  text-align: center;
+  background: url('bg.jpg');
+  padding: 40px 0;
 }
 
 .copyright {
-    color: #FFFFFF;
-    font-size: 13px;
-    margin:20px 0;
+  color: #ffffff;
+  font-size: 13px;
+  margin: 20px 0;
 }
+
+main {
+}
+
+.banner {
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+
+.titulo-principal {
+  text-align: center;
+  font-size: 2em; /*em medida propocional, 2 x o tamanho e titulo principal sempre vai ser 2x*/
+  margin: 0 0 1em; /*tem que ser sempre proporcional*/
+  clear: left;
+  
+  /* Sombrear textos:
+  text-shadow: 2px 2px #FF0000;
+  */ 
+
+  /*
+  color:rgba(0,0,0,0.3) possibilita a opacidade por cores de um texto
+  */
+}
+
+/* Altera item por item
+.titulo-principal:first-letter {
+    font-weight: bold;
+}
+
+.titulo-principal:before {
+    content: "[";
+}
+
+.titulo-principal::after {
+    content: "]";
+}
+
+*/
+
+.principal {
+  padding: 3em 0;
+  background: #fefefe;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.principal p {
+  margin: 0 0 1em;
+}
+
+.principal strong {
+  font-weight: bold;
+}
+
+.principal em {
+  font-style: italic;
+}
+
+.utensilios {
+  width: 200px;
+  float: left; /*Tanto o float:left quanto o float: right servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, para que os outros elementos possam se posicionar ao redor dele*/
+  margin: 0 20px 20px 0; /*cima direita baixo esquerda*/
+}
+
+.mapa {
+  padding: 3em 0;
+  background: linear-gradient(
+    #fefefe,
+    #888888
+  ); /*pode usar graus de inclinações, radial-gradient, e pode em cada cor por a porcentagem de ocupação shite 50% */
+}
+
+.mapa-conteudo {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.mapa p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
+.beneficios {
+  padding: 3em 0;
+  background: #888888;
+  /* box-shadow: inset 0 0 30px #FF0000 - cria box interno */
+}
+
+.conteudo-beneficios {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.itens {
+  line-height: 2;
+}
+
+.itens:first-child {
+  /*pseudoelemento que pode alterar um elemento específico: last-child, nth-child(posição do item que quer alterar / 2n marca elementos pares) */
+  font-weight: bold;
+}
+
+.itens:before {
+  content: '★';
+}
+
+.lista-beneficios {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.img-beneficios {
+  width: 40%;
+  opacity: 1;
+  box-shadow: 10px 10px 10px 0 #000000; /* eixos x e y 30px gradiente amplitude da sombra
+  pode por várias sombras, opacidade: 
+  
+  box-shadow: 10px 10px 30px 20px #000000; -20px 20px rgba(255,0,0,0.5);
+  */
+ 
+}
+
+.img-beneficios:hover {
+    opacity: 0.3 ; /* vai de 0 a 1*/
+    transition: 400ms;
+}
+
+
+
+.video {
+  width: 560px;
+  margin: 2em auto;
+}
+
+/*
+SELECIONADORES AVANÇADOS
+
+main > p {} ancora só o primeiro filho direto
+img + p {} ancora o só 0 primeiro irmão de img
+img ~ p {}  seleciona todos os irmãos p de img 
+.principal p:not(#missão) {} seleciona todos os p menos o p com a id missão, exclui o item marcado
+
+*/
+/*
+ CALCULO DOS ELEMENTOS CSS
+
+ width: calc(40% - 26px); - calcula 40% e diminui 26px 
+ pode fazer diversas operações
+ 
+ 
+ */
+
+ /*MEDIA QUERY*/
+
+ @media screen and (max-width:480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video { /*mexe só no que quer que mude*/
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .img-beneficios {
+        width: 100%;
+    }
+ }

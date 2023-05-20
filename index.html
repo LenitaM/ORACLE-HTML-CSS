@@ -28,44 +28,101 @@ A terceira forma é através de um arquivo externo. Para que a estilização sej
 
 -->
 
-<!DOCTYPE html> <!-- 1º: ! = serve para id como doctype 2º qual a função do html (html5 n precisa id a nova atualização)  serve para informar ao navegador qual versão do HTML estamos usando -->
+<!DOCTYPE html>
+<!-- 1º: ! = serve para id como doctype 2º qual a função do html (html5 n precisa id a nova atualização)  serve para informar ao navegador qual versão do HTML estamos usando -->
 
-<html lang="pt-br"> <!-- tudo que vai ser redenrizado sem a primeira e a última tag,lang = linguagem usada -->
+<html lang="pt-br">
+  <!-- tudo que vai ser redenrizado sem a primeira e a última tag,lang = linguagem usada -->
 
-<head> <!-- informações passada para o navegador, estrutural-->
+  <head>
+    <!-- informações passada para o navegador, estrutural-->
 
-    <meta charset="UTF-8"> <!-- tag passa info e charset conjunto de caracteres escolhidos, um dicionário utilizado -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!---->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia Alura</title> <!-- titulo da página web -->
+    <meta charset="UTF-8" />
+    <!-- tag passa info e charset conjunto de caracteres escolhidos, um dicionário utilizado -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--para saber qual a quantidade de pixels-->
+    <title>Barbearia Alura</title>
+    <!-- titulo da página web -->
+    <link rel="stylesheet" href="reset.css" />
+    <!--sempre primeiro para n limpar nosso contéudo-->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style-one.css">
-</head> 
+  </head>
 
-<body> <!-- Informação a ser exibida pelos usuários-->
+  <body>
+    <!-- Informação a ser exibida pelos usuários-->
 
-    <header> <!--Cabeçalho da Page-->
-       <h1 class="titulo-principal"> Barbearia Alura</h1>
+    <header>
+      <div class="caixa">
+        <h1>
+          <!--quando tem uma logo e a o principal a ser exibido-->
+          <img src="imgs\logo.png" alt="barbearia Alura" />
+        </h1>
+
+        <nav>
+          <!-- tag de navegação-->
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- tag ancoragem <a> </a> = Com o atributo href, teremos o endereço de destino de um link, podendo direcionar para e-mails, telefones, outros sites e abas -->
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="contatos.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <img id="banner" src="imgs\banner.jpg">
+    <img class="banner" src="imgs\banner.jpg" />
 
-    <div class="principal"> <!-- Serve para marcar o contéudo, -->
+    <main>
+      <section class="principal"> <!-- conteudo complexo que tem o mesmo conteúdo e objetivo-->
+        <!-- Serve para marcar o contéudo, -->
         <!--Niveis hierarquicos o body é pai de tudo dentro dela-->
-        <h2 class="titulo-centralizado"> Sobre a Barbearia Alura </h2>
+        <h2 class="titulo-principal">Sobre a Barbearia Alura</h2>
 
-        <p >Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+        <img src="imgs\utensilios.jpg" alt="Utensílios da Barbearia Alura" class="utensilios">
 
-        <p  id="missão">Nossa missão é: <em> <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong></em>.</p>
+        <p>
+          Localizada no coração da cidade a
+          <strong>Barbearia Alura</strong> traz para o mercado o que há de
+          melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura
+          já é destaque na cidade e conquista novos clientes a cada dia.
+        </p>
 
-        <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
-    </div>
+        <p id="missão">
+          Nossa missão é:
+          <em>
+            <strong
+              >"Proporcionar auto-estima e qualidade de vida aos
+              clientes"</strong
+            ></em
+          >.
+        </p>
 
-   <div class="beneficios">
+        <p>
+          Oferecemos profissionais experientes e antenados às mudanças no mundo
+          da moda. O atendimento possui padrão de excelência e agilidade,
+          garantindo qualidade e satisfação dos nossos clientes.
+        </p>
+    </section>
+    </main>
 
-    <h3 class="titulo-centralizado"> Benefícios </h3>
+    <section class="mapa">
+      <h3 class="titulo-principal">Nosso establecimento</h3>
+      <p>Nosso estabelecimento está localizado no coração da cidade</p> 
 
-<!--
+<!--tag <iframe> para por mapas, vídeos, fotos ig acessos externos-->
+      <div class="mapa-conteudo">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.449978938044!2d-46.63694532846543!3d-23.588189815659966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sAlura%20-%20Escola%20Online%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1684554974470!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </section>
+
+    <section class="beneficios">
+      <h3 class="titulo-principal">Benefícios</h3>
+
+      <!--
     LSITAS
     
 Listas Não Ordenadas: <ul> </ul>
@@ -73,13 +130,29 @@ Listas Ordenadas: <ol> </ol>
 Lista interna do ul e ol: <li></li> marca cada item da lista
 
 -->
-    <ul> <!-- ctrl + shift + alt + seta para baixo escreve em varias linhas ao mesmo tempo-->
-        <li class="itens">Atendimento ao Cliente</li>
-        <li class="itens">Espaço diferenciado</li>
-        <li class="itens">Localização</li>
-        <li class="itens">Profissionais Qualificados</li>
-    </ul>
-<img class="img-beneficios" src="imgs\beneficios.jpg" alt="beneficios">
+<div class="conteudo-beneficios">
+  <ul class="lista-beneficios">
+    <!-- ctrl + shift + alt + seta para baixo escreve em varias linhas ao mesmo tempo-->
+    <li class="itens">Atendimento ao Cliente</li>
+    <li class="itens">Espaço diferenciado</li>
+    <li class="itens">Localização</li>
+    <li class="itens">Profissionais Qualificados</li>
+    <li class="itens">Pontualidades</li>
+    <li class="itens">Limpeza</li>
+  </ul><img class="img-beneficios" src="imgs\barbearia2.jpg" alt="beneficios" />
+  <!-- para usar o inline-block precisa um está colado no outro-->
 </div>
-</body>
+    </section>
+
+    <div class="video">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      </iframe>
+    </div>
+
+    <footer>
+      <!--tag do rodapé da page-->
+      <img src="imgs\logo-branco.png" alt="logo Copyright" />
+      <p class="copyright">&copy; Copyright Barbearia Alura - 2023</p>
+    </footer>
+  </body>
 </html>
